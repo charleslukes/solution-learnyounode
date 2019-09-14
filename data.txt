@@ -1,0 +1,9 @@
+Use something like cross-env on windows environments: npm cross-env
+From what I can find, this appears to fall into the 'Windows issues
+with NODE_ENV' category. Setting the NODE_ENV separately, 
+prior to starting the app results in the environment working
+correctly; any manipulation of NODE_ENV inside a package.json 
+script on its own results in failure.
+This answer on another question led me to the package cross-env,
+and when implemented as identified in the answer resolves the issue.
+
